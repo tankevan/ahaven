@@ -7,9 +7,11 @@ Ahaven::Application.routes.draw do
   resource 'posts'
 
   root :to => "dashboard_pages#index"
+  devise_for :users, :controllers => { :registrations => "registrations" }
 
   match "/welcome" => "landing_pages#index", :as => "home"
-  match "accounts" => "accmans#index", :as => "accounts"
+  match "/accounts" => "accmans#index", :as => "accounts"
+  match "/accman" => "accmans#create", :as => "create_accman"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
