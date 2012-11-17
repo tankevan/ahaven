@@ -1,0 +1,8 @@
+<li>
+  <div>
+	<%= link_to feed.name,  {:controller => :dashboard_pages,
+      :action => 'index', :feed_id => feed.id } %>
+	<%= link_to "delete", {:controller => :feeds,
+      :action => 'destroy', :feed_id => feed.id }, :method => :delete %>
+  </div>
+</li>

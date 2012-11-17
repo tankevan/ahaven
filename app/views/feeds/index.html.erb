@@ -1,0 +1,8 @@
+<%= render :partial => "feeds/feed", :collection => @feed %>
+
+<%= form_tag(:controller => "feeds", :action => "create") do %>
+	<%= label_tag(:feed, "Repository") %>
+	<%= text_field_tag(:feed) %>
+	<%= submit_tag("Create New Feed") %>
+<% end %>
+
